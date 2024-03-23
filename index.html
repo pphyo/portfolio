@@ -6,10 +6,16 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Pyae Phyo</title>
    <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/skins/color-1.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1">
+   <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+   <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+   <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+   <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+   <link rel="stylesheet" href="css/style-switcher.css">
 </head>
 
 <body>
@@ -41,8 +47,8 @@
             <div class="container">
                <div class="row">
                   <div class="home-info padd-15">
-                     <h3 class="hello">Hello, my name is <span class="name">Pyae Phyo</span></h3>
-                     <h3 class="my-profession">I'm a <span class="typing">Java Developer</span></h3>
+                     <h3 class="hello">Hello, My name is <span class="name">Pyae Phyo</span></h3>
+                     <h3 class="my-profession">I'm a <span class="typing"></span></h3>
                      <p>I am a instructor from JDC under SOLT Co.,Ltd. I instruct Java Standard
                         Edition 21, Spring Framework 6 and Spring Boot 3, Angular Framework
                         17 and also develop back-end with Spring REST and front-end Angular with experience over 5
@@ -115,7 +121,8 @@
 
                            <div class="row">
                               <div class="buttons padd-15">
-                                 <a href="" class="btn">Down CV</a>
+                                 <a href="https://storage.rxresu.me/clp9g12jged949hunniyfpnea/resumes/clp9kuteg01yc5499xyh9wpmo.pdf"
+                                    target="_blank" class="btn">Down CV</a>
                                  <a href="#contact" class="btn hire-me">Hire Me</a>
                               </div>
                            </div>
@@ -530,7 +537,30 @@
 
    <!-- Main Container End -->
 
+   <!-- Style Switcher Start -->
+   <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+         <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon">
+         <i class="fa"></i>
+      </div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+         <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+         <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+         <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+         <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+         <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+   </div>
+   <!-- Style Switcher End -->
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"
+      integrity="sha512-MzkTUQKzHBkhWDcz2CVCP1GBbj8NPlpVW4oZrvc4//GFLiXmBno2yb6C9Cb0POuO4jpQrmxMLYKCuMJN7XDcBg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <script src="js/script.js"></script>
+   <script src="js/style-switcher.js"></script>
 </body>
 
 </html>
