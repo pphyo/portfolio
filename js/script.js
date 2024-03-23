@@ -1,3 +1,76 @@
+const serviceId = "service_geus3x9";
+const templateId = "template_97lse4q";
+
+(function(){
+   emailjs.init({
+     publicKey: "bvm9GAi_F7nhHw2_B",
+   });
+})();
+
+const contactForm = document.querySelector("form");
+
+const submitForm = (e) => {
+   e.preventDefault();
+   const errors = []
+   
+   let name = document.querySelector("input[name='name']");
+   if(!name.value) {
+      errors.push("Name required!");
+   }
+
+   let email = document.querySelector("input[name='email']");
+   if(!email.value) {
+      errors.push("Email required!");
+   }
+
+   let subject = document.querySelector("input[name='subject']");
+   if(!subject.value) {
+      errors.push("Subject required!");
+   }
+
+   let message = document.querySelector("textarea[name='message']");
+   if(!message.value) {
+      errors.push("Message required!");
+   }
+   if(errors.length > 0) {
+      let info = ""
+      for(let i = 0; i < errors.length; i++) {
+         info += errors[i];
+         if(i != errors.length - 1) {
+            info += "\n";
+         }
+      }
+      window.alert(info);
+   } else {
+      let confirm = window.confirm("Are you sure to send?");
+      if(confirm) {
+         const params = {
+            name: name.value,
+            email: email.value,
+            subject: subject.value,
+            message: message.value
+         }
+
+         emailjs.send(serviceId, templateId, params).then(
+            (response) => {
+              window.alert('SUCCESSFULLY SEND!');
+              console.log(response.status, response.text);
+            },
+            (error) => {
+              window.alert('FAILED...')
+              console.log(error);
+            },
+         );
+
+         contactForm.reset()
+      }
+
+   }
+}
+
+contactForm.addEventListener("submit", submitForm);
+
+
 var typed = new Typed(".typing", {
    strings: ["Java Developer", "Web Developer", "Instructor"],
    typeSpeed: 300,

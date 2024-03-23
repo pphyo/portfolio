@@ -104,12 +104,10 @@
                      <div class="row">
                         <div class="about-text padd-15">
                            <h3>I'm Pyae Phyo and <span>Java Developer</span></h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt. Molestiae vel
-                              adipisci exercitationem laborum dolor quisquam quo quod. Inventore cupiditate quibusdam
-                              quisquam eos cumque porro, nostrum assumenda. Sequi, illo. Lorem ipsum dolor sit amet
-                              consectetur adipisicing elit. Illum, sunt. Molestiae vel
-                              adipisci exercitationem laborum dolor quisquam quo quod. Inventore cupiditate quibusdam
-                              quisquam eos cumque porro, nostrum assumenda. Sequi, illo.</p>
+                           <p>I am a instructor from JDC under SOLT Co.,Ltd. I instruct Java Standard
+                              Edition 21, Spring Framework 6 and Spring Boot 3, Angular Framework
+                              17 and also develop back-end with Spring REST and front-end Angular with experience over 5
+                              years.</p>
                         </div>
                      </div>
 
@@ -513,17 +511,17 @@
 
                <!-- Contact Form -->
                <div class="row">
-                  <div class="contact-form padd-15">
+                  <form method="post" class="contact-form padd-15">
                      <div class="row">
                         <div class="form-item col-6 padd-15">
                            <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Name">
+                              <input type="text" name="name" class="form-control" placeholder="Name">
                            </div>
                         </div>
 
                         <div class="form-item col-6 padd-15">
                            <div class="form-group">
-                              <input type="email" class="form-control" placeholder="Email">
+                              <input type="email" name="email" class="form-control" placeholder="Email">
                            </div>
                         </div>
                      </div>
@@ -531,7 +529,7 @@
                      <div class="row">
                         <div class="form-item col-12 padd-15">
                            <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Subject">
+                              <input type="text" name="subject" class="form-control" placeholder="Subject">
                            </div>
                         </div>
                      </div>
@@ -539,7 +537,7 @@
                      <div class="row">
                         <div class="form-item col-12 padd-15">
                            <div class="form-group">
-                              <textarea class="form-control" placeholder="Message"></textarea>
+                              <textarea name="message" class="form-control" placeholder="Message"></textarea>
                            </div>
                         </div>
                      </div>
@@ -549,7 +547,7 @@
                            <button type="submit" class="btn">Send Message</button>
                         </div>
                      </div>
-                  </div>
+                  </form>
                </div>
             </div>
          </section>
@@ -580,6 +578,7 @@
    </div>
    <!-- Style Switcher End -->
 
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"
       integrity="sha512-MzkTUQKzHBkhWDcz2CVCP1GBbj8NPlpVW4oZrvc4//GFLiXmBno2yb6C9Cb0POuO4jpQrmxMLYKCuMJN7XDcBg=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
