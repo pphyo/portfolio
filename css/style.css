@@ -287,12 +287,12 @@ ul {
 
 h3.hello {
    font-size: 28px;
-   margin: 15px 0;
+   margin: 0;
 }
 
-h3.hello span {
-   font-family: 'Clicker Script', cursive;
-   font-size: 40px;
+h3.name {
+   margin-top: 0;
+   font-size: 4rem;
    font-weight: 700;
    color: var(--skin-color);
 }

@@ -109,9 +109,9 @@ const aside = document.querySelector(".aside");
 (function() {
    'use strict';
 
-   if(window.innerWidth <= 1199) {
-      navToggler.addEventListener("click", () => {
-         
+   navToggler.addEventListener("click", () => {
+      
+      if(window.innerWidth <= 1199) {
          if(!aside.style.left) {
             aside.style.left = "-270px";
          }
@@ -123,34 +123,39 @@ const aside = document.querySelector(".aside");
             aside.style.left = "-270px";
             navToggler.style.left = "10px";
          }
-      })
-      window.addEventListener("resize", () => {
-         if(window.innerWidth > 1199) {
-            aside.style.left = null;
-         }
-      })
-   }
+      }
+      
+   })
+   window.addEventListener("resize", () => {
+      if(window.innerWidth > 1199) {
+         aside.style.left = null;
+      }
+   })
+
+   
 })();
 
 (function() {
    'use strict';
  
-   var section = document.querySelectorAll(".section");
-   var sections = {};
-   var i = 0;
+   let section = document.querySelectorAll(".section");
+   let sections = {};
  
    Array.prototype.forEach.call(section, function(e) {
      sections[e.id] = e.offsetTop;
    });
+
+   console.log(sections)
  
    window.onscroll = function() {
      var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
  
-     for (i in sections) {
-       if (sections[i] <= scrollPosition) {
+     for (let i in sections) {
+       if (sections[i] <= scrollPosition + 50) {
          document.querySelector('.active').setAttribute('class', ' ');
          document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
        }
+       console.log(sections[i])
      }
    };
  })();
