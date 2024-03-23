@@ -256,7 +256,7 @@ ul {
    border-bottom: 1px solid var(--bg-black-50);
    color: var(--text-black-900);
    padding: 5px 15px;
-   transition: all 0.3s ease;
+   transition: all 0.1s ease;
 }
 
 .aside .nav li:hover a {
@@ -409,12 +409,6 @@ h3.my-profession {
 .about .about-content .personal-info .buttons .btn {
    margin-right: 15px;
    margin-top: 10px;
-}
-
-.about .about-content .skills {
-   flex: 0 0 100%;
-   max-width: 100%;
-   margin-top: 40px;
 }
 
 .skill-section .skills .skill-item {
