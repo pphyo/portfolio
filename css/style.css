@@ -750,6 +750,10 @@ h3.my-profession {
       max-width: 100%;
    }
 
+   h3.name {
+      font-size: 2.5rem;
+   }
+
    h3.hello,
    h3.hello span,
    .my-profession,
