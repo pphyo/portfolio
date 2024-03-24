@@ -78,15 +78,21 @@ var typed = new Typed(".typing", {
    loop: true
 });
 
-const navItems = document.querySelectorAll(".nav a");
 const navToggler = document.querySelector(".nav-toggler");
 const aside = document.querySelector(".aside");
 
 (function() {
    'use strict';
 
+   const navItems = document.querySelectorAll(".nav a");
+   
    for(let i = 0; i < navItems.length; i++) {
       navItems[i].addEventListener("click", () => {
+         
+         if(window.innerWidth <= 1199) {
+            aside.style.left = "-270px";
+            navToggler.style.left = "10px"
+         }
 
          for(let j = 0; j < navItems.length; j++) {
             if(navItems[j] == navItems[i]) {
@@ -96,14 +102,9 @@ const aside = document.querySelector(".aside");
             }
          }
 
-         if(window.innerWidth <= 1199) {
-            aside.style.left = "-270px";
-            navToggler.style.left = "10px"
-         }
-
       })
    }
-});
+})();
 
 
 (function() {
